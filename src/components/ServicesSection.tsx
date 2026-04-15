@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Circle, Grid, Smile, Zap, Sparkles, ArrowRight } from 'lucide-react';
 
@@ -8,31 +9,36 @@ export const ServicesSection: React.FC = () => {
       icon: <Circle className="w-8 h-8" />,
       title: "Single Tooth Implant",
       description: "A permanent, natural-looking replacement for a single missing tooth that preserves your jawbone and surrounding teeth.",
-      link: "#contact"
+      link: "/services/single-tooth-implant",
+      image: "/single-tooth-implant.png"
     },
     {
       icon: <Grid className="w-8 h-8" />,
       title: "Multiple Implants",
       description: "Strategically placed implants to support bridges or multiple crowns, restoring full function and aesthetics to your smile.",
-      link: "#contact"
+      link: "/services/multiple-implants",
+      image: "/multiple-implants.png"
     },
     {
       icon: <Smile className="w-8 h-8" />,
       title: "Full Mouth Implants",
       description: "Total smile transformation for patients with significant tooth loss, providing a fixed, non-removable set of beautiful teeth.",
-      link: "#contact"
+      link: "/services/full-mouth-implants",
+      image: "/full-mouth-implants.png"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Advanced Custom Solutions",
       description: "Specialized Zygomatic and Pterygoid implants for complex cases where traditional bone structure may be lacking.",
-      link: "#contact"
+      link: "/services/advanced-custom-solutions",
+      image: "/old office2.jpg"
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
       title: "123 Teeth™",
       description: "Our revolutionary 24-hour workflow. Walk in with missing teeth, walk out with a permanent, stunning smile in one day.",
-      link: "#contact"
+      link: "/services/123-teeth",
+      image: "/123-teeth-service.png"
     }
   ];
 
@@ -82,46 +88,55 @@ export const ServicesSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`p-10 rounded-[40px] border transition-all group relative overflow-hidden ${
+              className={`rounded-[32px] border overflow-hidden transition-all group ${
                 service.title === "123 Teeth™" 
-                  ? 'bg-deep-teal border-deep-teal shadow-2xl shadow-deep-teal/20 lg:col-span-2' 
-                  : 'bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10'
+                  ? 'border-deep-teal shadow-2xl shadow-deep-teal/20 lg:col-span-2' 
+                  : 'border-white/10 hover:border-white/20'
               }`}
             >
-              {service.title === "123 Teeth™" && (
-                <div className="absolute top-0 right-0 p-8 opacity-10">
-                  <Sparkles className="w-32 h-32 text-white" />
+              {/* Image Panel */}
+              <div className="relative h-56 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                {/* Icon badge */}
+                <div className={`absolute bottom-4 left-6 w-12 h-12 rounded-xl flex items-center justify-center ${
+                  service.title === "123 Teeth™" 
+                    ? 'bg-deep-teal text-white' 
+                    : 'bg-black/60 backdrop-blur-sm text-deep-teal border border-white/10'
+                }`}>
+                  {service.icon}
                 </div>
-              )}
-
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-transform group-hover:scale-110 ${
-                service.title === "123 Teeth™" ? 'bg-white/20 text-white' : 'bg-deep-teal/20 text-deep-teal'
-              }`}>
-                {service.icon}
               </div>
 
-              <h4 className={`text-2xl md:text-3xl font-heading mb-4 ${
-                service.title === "123 Teeth™" ? 'text-white' : 'text-white'
+              {/* Text Content */}
+              <div className={`p-8 ${
+                service.title === "123 Teeth™" ? 'bg-deep-teal' : 'bg-white/5 backdrop-blur-sm'
               }`}>
-                {service.title}
-              </h4>
+                <h4 className="text-2xl md:text-3xl font-heading text-white mb-3">
+                  {service.title}
+                </h4>
 
-              <p className={`text-lg mb-8 leading-relaxed ${
-                service.title === "123 Teeth™" ? 'text-white/80' : 'text-white/50'
-              }`}>
-                {service.description}
-              </p>
+                <p className={`text-base mb-6 leading-relaxed ${
+                  service.title === "123 Teeth™" ? 'text-white/80' : 'text-white/50'
+                }`}>
+                  {service.description}
+                </p>
 
-              <a 
-                href={service.link}
-                className={`inline-flex items-center gap-2 font-sans font-bold uppercase tracking-widest text-xs transition-all ${
-                  service.title === "123 Teeth™" 
-                    ? 'text-white hover:gap-4' 
-                    : 'text-deep-teal hover:text-white hover:gap-4'
-                }`}
-              >
-                Learn More <ArrowRight className="w-4 h-4" />
-              </a>
+                <Link 
+                  to={service.link}
+                  className={`inline-flex items-center gap-2 font-sans font-bold uppercase tracking-widest text-xs transition-all ${
+                    service.title === "123 Teeth™" 
+                      ? 'text-white hover:gap-4' 
+                      : 'text-deep-teal hover:text-white hover:gap-4'
+                  }`}
+                >
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>

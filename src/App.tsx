@@ -44,14 +44,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-white/5">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-deep-teal rounded-xl flex items-center justify-center text-white font-heading text-2xl font-bold shadow-lg shadow-deep-teal/20">
-            O
-          </div>
-          <div>
-            <span className="block text-xl font-heading leading-none text-white">Orlando Lifestyle</span>
-            <span className="block text-[10px] uppercase tracking-[0.3em] text-deep-teal font-bold mt-1">Dentistry</span>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img
+            src="/logo.avif"
+            alt="Orlando Lifestyle Dentistry"
+            className="h-16 w-auto object-contain"
+          />
         </Link>
         
         <div className="hidden lg:flex items-center gap-10 text-xs font-sans font-bold uppercase tracking-widest text-white/60">
@@ -147,14 +145,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-deep-teal rounded-xl flex items-center justify-center text-white font-heading text-2xl font-bold">
-                O
-              </div>
-              <div>
-                <span className="block text-xl font-heading leading-none">Orlando Lifestyle</span>
-                <span className="block text-[10px] uppercase tracking-[0.3em] text-deep-teal font-bold mt-1">Dentistry</span>
-              </div>
+            <div className="mb-8">
+              <img
+                src="/logo.avif"
+                alt="Orlando Lifestyle Dentistry"
+                className="h-16 w-auto object-contain"
+              />
             </div>
             <p className="text-white/40 text-sm leading-relaxed mb-8 max-w-xs">
               Redefining the dental experience through innovation, empathy, and surgical excellence.

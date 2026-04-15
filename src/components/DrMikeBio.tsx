@@ -19,10 +19,9 @@ export const DrMikeBio: React.FC = () => {
               className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] border border-white/10"
             >
               <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=1000" 
+                src="/old dr.jpg" 
                 alt="Dr. Michael Gagaoudakis" 
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             </motion.div>

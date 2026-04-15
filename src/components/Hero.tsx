@@ -5,16 +5,20 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 export const Hero: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-background flex items-center justify-center pt-32 pb-20">
-      {/* Background Image with Gradient Overlay */}
+      {/* Background Video with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070" 
-          alt="Modern Dental Clinic"
-          className="w-full h-full object-cover opacity-30"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background opacity-60" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/Drone-Video.mov" type="video/mp4" />
+        </video>
+        {/* Dark scrim for text legibility */}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col min-h-[calc(100vh-128px)]">
@@ -37,18 +41,18 @@ export const Hero: React.FC = () => {
               </motion.div>
 
               <h1 className="text-5xl md:text-8xl lg:text-[120px] font-heading text-white leading-[1.1] md:leading-[1] tracking-tighter mb-10">
-                Experience <br />
-                <span className="text-deep-teal italic">123Teeth™</span>
+                Orlando's Place For <br />
+                <span className="text-deep-teal italic">Your new smile.</span>
               </h1>
 
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-lg md:text-2xl text-white/70 font-sans max-w-2xl mx-auto mb-14 leading-relaxed"
+                className="text-lg md:text-2xl text-white font-sans max-w-2xl mx-auto mb-14 leading-relaxed drop-shadow-lg"
               >
-                The world's most advanced full-arch restoration. No bone grafting. 
-                No dentures. Just your perfect smile in record time.
+                New Teeth, New Smile, New You.<br />
+                See whether implants may be right for you.
               </motion.p>
 
               <motion.div 

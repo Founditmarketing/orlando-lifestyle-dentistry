@@ -43,6 +43,21 @@ export const AdvantageSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Office Image Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative rounded-3xl overflow-hidden mb-16 h-80 border border-white/10 shadow-2xl"
+        >
+          <img
+            src="/old office3.avif"
+            alt="Orlando Lifestyle Dentistry Office"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent" />
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
