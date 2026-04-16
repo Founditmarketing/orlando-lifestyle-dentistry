@@ -16,7 +16,7 @@ const MeetDrMike: React.FC = () => {
               className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-[4/5] border border-white/10"
             >
               <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=1000" 
+                src="/old office8.jpg" 
                 alt="Dr. Michael Gagaoudakis" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -155,10 +155,10 @@ const MeetDrMike: React.FC = () => {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="aspect-square rounded-3xl overflow-hidden border border-white/10">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=500" alt="Clinic" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/old office.jpg" alt="Clinic" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-square rounded-3xl overflow-hidden border border-white/10 mt-8">
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=500" alt="Tech" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="/old office4.avif" alt="Tech" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

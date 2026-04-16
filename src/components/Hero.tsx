@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/Drone-Video.mov" type="video/mp4" />
+          <source src="/video.mp4" type="video/mp4" />
         </video>
         {/* Dark scrim for text legibility */}
         <div className="absolute inset-0 bg-black/50" />
@@ -61,10 +61,10 @@ export const Hero: React.FC = () => {
                 transition={{ delay: 0.6, duration: 0.8 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-6"
               >
-                <button className="group relative px-10 py-5 bg-deep-teal text-white rounded-full font-sans font-bold overflow-hidden transition-all hover:pr-14 shadow-2xl shadow-deep-teal/40">
+                <a href="#contact" className="group relative px-10 py-5 bg-deep-teal text-white rounded-full font-sans font-bold overflow-hidden transition-all hover:pr-14 shadow-2xl shadow-deep-teal/40">
                   <span className="relative z-10">Free Consultation</span>
                   <ArrowRight className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 w-5 h-5" />
-                </button>
+                </a>
                 
                 <button className="px-10 py-5 border border-white/20 text-white rounded-full font-sans font-bold hover:bg-white hover:text-background transition-all backdrop-blur-sm">
                   View Gallery

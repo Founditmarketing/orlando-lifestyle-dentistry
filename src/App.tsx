@@ -13,10 +13,17 @@ import { useLocation } from 'react-router-dom';
 
 // Scroll to top component
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 };
 
@@ -95,9 +102,9 @@ const Navbar = () => {
           <a href="tel:4075550123" className="hidden xl:flex items-center gap-2 text-white font-bold text-sm">
             <Phone className="w-4 h-4 text-deep-teal" /> (407) 555-0123
           </a>
-          <button className="px-8 py-3 bg-deep-teal text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-oceanic-teal transition-all shadow-lg shadow-deep-teal/20">
+          <a href="/#contact" className="px-8 py-3 bg-deep-teal text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-oceanic-teal transition-all shadow-lg shadow-deep-teal/20">
             Book Now
-          </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -156,9 +163,15 @@ const Footer = () => {
               Redefining the dental experience through innovation, empathy, and surgical excellence.
             </p>
             <div className="flex gap-5">
-              <Instagram className="w-5 h-5 text-white/20 hover:text-deep-teal cursor-pointer transition-colors" />
-              <Facebook className="w-5 h-5 text-white/20 hover:text-deep-teal cursor-pointer transition-colors" />
-              <Youtube className="w-5 h-5 text-white/20 hover:text-deep-teal cursor-pointer transition-colors" />
+              <a href="https://www.instagram.com/orlandolifestyledentistry/#" target="_blank" rel="noopener noreferrer">
+                <Instagram className="w-5 h-5 text-white/20 hover:text-deep-teal cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.facebook.com/OrlandosPlaceForImplants" target="_blank" rel="noopener noreferrer">
+                <Facebook className="w-5 h-5 text-white/20 hover:text-deep-teal cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.youtube.com/@orlandolifestyledentistry10" target="_blank" rel="noopener noreferrer">
+                <Youtube className="w-5 h-5 text-white/20 hover:text-deep-teal cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -181,7 +194,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-deep-teal flex-shrink-0" />
-                <span>(407) 555-0123</span>
+                <a href="tel:4075550123" className="hover:text-deep-teal transition-colors"><span>(407) 555-0123</span></a>
               </li>
             </ul>
           </div>

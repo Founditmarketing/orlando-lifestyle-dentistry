@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Clock, Shield, Sparkles, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { LeadForm } from '../components/LeadForm';
 
 const OneTwoThreeTeethWorkflow: React.FC = () => {
   const steps = [
@@ -110,13 +111,17 @@ const OneTwoThreeTeethWorkflow: React.FC = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <a 
-            href="/contact" 
-            className="inline-flex items-center gap-3 px-12 py-6 bg-deep-teal text-white rounded-full font-sans font-bold text-lg hover:bg-oceanic-teal transition-all shadow-2xl shadow-deep-teal/30"
-          >
-            Start Your 24-Hour Journey <ArrowRight className="w-5 h-5" />
+          <a href="#contact" className="group">
+            <h2 className="text-5xl md:text-7xl font-heading text-white hover:text-deep-teal transition-colors duration-300 pb-4 overflow-visible">
+              Start Your <span className="text-deep-teal italic group-hover:text-white transition-colors duration-300">24-Hour Journey</span>
+            </h2>
           </a>
         </div>
+      </div>
+
+      {/* Consultation Form */}
+      <div id="contact">
+        <LeadForm />
       </div>
     </div>
   );

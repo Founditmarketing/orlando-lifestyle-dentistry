@@ -31,7 +31,7 @@ export const ServicesSection: React.FC = () => {
       title: "Advanced Custom Solutions",
       description: "Specialized Zygomatic and Pterygoid implants for complex cases where traditional bone structure may be lacking.",
       link: "/services/advanced-custom-solutions",
-      image: "/old office2.jpg"
+      image: "/old office9.jpg"
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
@@ -90,7 +90,7 @@ export const ServicesSection: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className={`rounded-[32px] border overflow-hidden transition-all group ${
                 service.title === "123 Teeth™" 
-                  ? 'border-deep-teal shadow-2xl shadow-deep-teal/20 lg:col-span-2' 
+                  ? 'border-deep-teal shadow-2xl shadow-deep-teal/20 lg:col-span-2 bg-deep-teal' 
                   : 'border-white/10 hover:border-white/20'
               }`}
             >

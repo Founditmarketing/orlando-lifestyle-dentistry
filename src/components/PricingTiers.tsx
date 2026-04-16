@@ -58,7 +58,7 @@ export const PricingTiers: React.FC = () => {
             Transparent, Accessible Pricing
           </h3>
           <p className="text-white/60 max-w-2xl mx-auto text-lg">
-            Premium dentistry shouldn't be a mystery. We offer flexible financing options to fit your lifestyle.
+            Your path to a healthier, more radiant smile should feel empowering—not overwhelming. Let us help you invest in your smile with confidence and clarity.
           </p>
         </div>
 

@@ -48,19 +48,15 @@ const VideoCard: React.FC<VideoProps> = ({ id, title, thumbnail }) => {
 
 export const YouTubeGallery: React.FC = () => {
   const videos = [
-    { id: "dQw4w9WgXcQ", title: "The 123Teeth™ Patient Experience", thumbnail: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" },
-    { id: "dQw4w9WgXcQ", title: "Dr. Mike's Surgical Philosophy", thumbnail: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" },
-    { id: "dQw4w9WgXcQ", title: "Zygomatic Implants Explained", thumbnail: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" },
-    { id: "dQw4w9WgXcQ", title: "Life After Full Mouth Restoration", thumbnail: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" },
-    { id: "dQw4w9WgXcQ", title: "Why Zirconia Matters", thumbnail: "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=800" },
-    { id: "dQw4w9WgXcQ", title: "Patient Success Story: John's Journey", thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800" },
+    { id: "cS1JeZYZcIk", title: "The 123Teeth™ Patient Experience", thumbnail: "https://img.youtube.com/vi/cS1JeZYZcIk/maxresdefault.jpg" },
+    { id: "Zbo-_eSuBzM", title: "Dr. Mike's Surgical Philosophy", thumbnail: "https://img.youtube.com/vi/Zbo-_eSuBzM/maxresdefault.jpg" },
+    { id: "10Yi0mp5fw8", title: "Zygomatic Implants Explained", thumbnail: "https://img.youtube.com/vi/10Yi0mp5fw8/maxresdefault.jpg" },
   ];
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl">
+        <div className="max-w-2xl mb-12">
             <h2 className="text-deep-teal font-sans font-semibold tracking-widest uppercase text-sm mb-4">
               Video Experience
             </h2>
@@ -68,10 +64,6 @@ export const YouTubeGallery: React.FC = () => {
               See the Transformation
             </h3>
           </div>
-          <button className="flex items-center gap-2 text-deep-teal font-sans font-semibold hover:text-oceanic-teal transition-colors">
-            Visit Our YouTube Channel <ExternalLink className="w-4 h-4" />
-          </button>
-        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((video, index) => (
@@ -85,6 +77,19 @@ export const YouTubeGallery: React.FC = () => {
               <VideoCard {...video} />
             </motion.div>
           ))}
+        </div>
+
+        {/* YouTube CTA Button */}
+        <div className="flex justify-center mt-12">
+          <a
+            href="https://www.youtube.com/@orlandolifestyledentistry10"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-deep-teal text-white rounded-full font-sans font-bold uppercase tracking-widest text-sm hover:bg-oceanic-teal transition-all shadow-2xl shadow-deep-teal/30"
+          >
+            Visit Our YouTube Channel
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
         </div>
       </div>
     </section>

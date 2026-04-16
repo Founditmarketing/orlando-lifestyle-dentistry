@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-heading text-lg mb-1">Call Us</h3>
-                  <p className="text-white/50">(407) 555-0123</p>
+                  <a href="tel:4075550123" className="text-white/50 hover:text-deep-teal transition-colors">(407) 555-0123</a>
                 </div>
               </div>
 
@@ -100,10 +100,9 @@ const Contact: React.FC = () => {
           >
             <div className="rounded-[40px] overflow-hidden border border-white/10 shadow-2xl h-[400px] relative group">
               <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000" 
+                src="/old office.jpg"
                 alt="Modern Dental Office"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               <div className="absolute bottom-8 left-8">

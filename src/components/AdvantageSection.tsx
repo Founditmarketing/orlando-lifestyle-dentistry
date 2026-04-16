@@ -7,7 +7,7 @@ export const AdvantageSection: React.FC = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "No Bone Grafting",
-      description: "Our advanced zygomatic and pterygoid implant techniques utilize your existing bone structure, eliminating the need for painful and time-consuming grafting procedures."
+      description: "Forget painful, months-long grafting. We utilize your existing bone structure for a faster, less invasive transformation."
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -16,13 +16,13 @@ export const AdvantageSection: React.FC = () => {
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "No Dentures",
-      description: "Skip the 'removable' phase entirely. We provide fixed, non-removable solutions from day one, so you never have to worry about adhesives or slipping."
+      title: "Goodbye Dentures",
+      description: "Skip the \"removable\" phase. Get fixed, non-removable teeth from day one—no adhesives, no slipping, no embarrassment."
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: "Zirconia Excellence",
-      description: "We use premium Zirconia prosthetics for unmatched strength, durability, and a natural aesthetic that mimics real tooth enamel."
+      description: "The gold standard. Enjoy premium Zirconia prosthetics that offer diamond-like durability and a flawless, natural glow."
     }
   ];
 
@@ -35,12 +35,11 @@ export const AdvantageSection: React.FC = () => {
           <h2 className="text-deep-teal font-sans font-semibold tracking-widest uppercase text-sm mb-4">
             The 123Teeth™ Advantage
           </h2>
-          <h3 className="text-4xl md:text-5xl font-heading text-white mb-6">
-            The Dr. Mike Difference
+          <h3 className="text-4xl md:text-6xl font-heading text-white mb-6">
+            Your Journey to a New Smile<br />
+            <span className="text-deep-teal italic">STARTS RIGHT HERE.</span>
           </h3>
-          <p className="text-white/60 max-w-2xl mx-auto text-lg">
-            A redesigned dental experience prioritizing your comfort, time, and lasting health.
-          </p>
+
         </div>
 
         {/* Office Image Banner */}
